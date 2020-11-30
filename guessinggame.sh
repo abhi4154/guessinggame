@@ -1,6 +1,6 @@
 #####-Function Start-#####
 function guess {
-echo "Guess number:"
+echo "Guess number of files in current directory:"
 read guess
 }
 #####-Function End-#####
@@ -8,7 +8,7 @@ read guess
 cond="true"
 while [ $cond = "true" ]
  do
- echo "Guess number:"
+ echo "Guess number of files in current directory:"
  read guess
  num=3
  cond1="true"
