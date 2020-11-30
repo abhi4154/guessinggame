@@ -5,14 +5,14 @@ read guess
 }
 #####-Function End-#####
 #####-Program Start-#####
-cond="Y"
-while [ $cond = "Y" ]
+cond="true"
+while [ $cond = "true" ]
  do
  echo "Guess number:"
  read guess
  num=3
- cond1="Y"
- while [ $cond1 = "Y" ]
+ cond1="true"
+ while [ $cond1 = "true" ]
  do
    if [[ $guess -gt $num ]]
       then
@@ -24,9 +24,9 @@ while [ $cond = "Y" ]
       guess  ##Function Call##
    else
       echo "You are correct !!"
-      let cond1="N"
+      let cond1="false"
    fi
  done
-let cond="N"
+let cond="false"
 done
 #####-Program End-#####
