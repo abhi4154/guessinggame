@@ -1,7 +1,10 @@
+#####-Function Start-#####
 function guess {
 echo "Guess number:"
 read guess
 }
+#####-Function End-#####
+#####-Program Start-#####
 cond="Y"
 while [ $cond = "Y" ]
  do
@@ -14,11 +17,11 @@ while [ $cond = "Y" ]
    if [[ $guess -gt $num ]]
       then
       echo "Your guess is high"
-      guess
+      guess  ##Function Call##
    elif [[ $guess -lt $num ]]
       then
       echo "Your guess is low"
-      guess
+      guess  ##Function Call##
    else
       echo "You are correct !!"
       let cond1="N"
@@ -26,3 +29,4 @@ while [ $cond = "Y" ]
  done
 let cond="N"
 done
+#####-Program End-#####
