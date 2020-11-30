@@ -1,36 +1,28 @@
-###############FUNCTION GUESS###############
 function guess {
-echo "Guess Number:"
+echo "Guess number:"
 read guess
 }
-###############END FUNCTION###############
-###############PROGRAM START###############
 cond="Y"
 while [ $cond = "Y" ]
-do
- echo "Guess Number:"
- read guess 
- count=3
- cond1="Y"
-##Loop## 
-while [ $cond1 = "Y" ]
  do
-   ##IF Statement##
-   if [[ $guess -gt $count ]]
-     then
-     echo "Guess is high"
-     ##Function Call##
-     guess
-    elif [[ $guess -lt $count ]]
+ echo "Guess number:"
+ read guess
+ num=3
+ cond1="Y"
+ while [ $cond1 = "Y" ]
+ do
+   if [[ $guess -gt $num ]]
       then
-      echo "Guess is low"
-      ##Function Call##
+      echo "Your guess is high"
       guess
-    else
-      echo "You are Correct !!"
+   elif [[ $guess -lt $num ]]
+      then
+      echo "Your guess is low"
+      guess
+   else
+      echo "You are correct !!"
       let cond1="N"
-    fi
+   fi
  done
 let cond="N"
 done
-###############PROGRAM END###############
